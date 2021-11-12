@@ -9,7 +9,7 @@ var corsOptions = { // CORS 옵션
     origin: '*', 
     credentials: true 
 } 
-const BASE_URL = 'https://dictionary-search.herokuapp.com/api/words'
+// const BASE_URL = 'https://dictionary-search.herokuapp.com/api/words'
 
 const CONNECT_URL = 'mongodb+srv://jhr:8877@cluster0.hbm4u.mongodb.net/kor_dic_db?retryWrites=true&w=majority'
 //const CONNECT_URL = 'mongodb://localhost:27017/kor_dic_db'
@@ -39,6 +39,9 @@ app.put("/users/:id", (req,res) => {
             req.body.updateUserInfo
         )}!` 
     )
+})
+app.get('/hello', (req, res)=> {
+    res.send('hello world')
 })
 
 app.delete("/users/:id", (req, res)=>{
